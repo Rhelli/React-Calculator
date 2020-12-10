@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Button = props => {
-  const name = { props };
+  const { name } = props;
   return (
     <button type="button">
       {name}
@@ -10,6 +10,12 @@ const Button = props => {
   );
 };
 
+Button.defaultProps = {
+  name: '',
+};
+
 Button.propTypes = {
   name: PropTypes.string,
 };
+
+export default Button;
