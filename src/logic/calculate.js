@@ -3,7 +3,9 @@ const calculate = (dataObject, buttonName) => {
 
   if (buttonName === '+/-') {
     return {
-      total: total
+      total,
+      next,
+      operation
     }
   }
 }
