@@ -1,6 +1,6 @@
 import Big from 'big.js';
 
-const operate = (numberOne, numberTwo, operation) => {
+const Operate = (numberOne, numberTwo, operation) => {
   const n1 = Big(numberOne);
   const n2 = Big(numberTwo);
 
