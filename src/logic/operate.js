@@ -1,6 +1,6 @@
 import Big from 'big.js';
 
-const Operate = (numberOne, numberTwo, operation) => {
+const operate = (numberOne, numberTwo, operation) => {
   const n1 = Big(numberOne);
   const n2 = Big(numberTwo);
 
@@ -13,7 +13,9 @@ const Operate = (numberOne, numberTwo, operation) => {
       return n1.multiply(n2);
     case '÷':
       return n1.div(n2);
+    default:
+      return null;
   }
-}
+};
 
 export default operate;

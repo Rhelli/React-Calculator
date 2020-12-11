@@ -1,6 +1,6 @@
-import Operate from './operate';
+import operate from './operate';
 
-const Calculate = (dataObject, buttonName) => {
+const calculate = (dataObject, buttonName) => {
   const { total, next, operation } = dataObject;
 
   switch (buttonName) {
@@ -8,52 +8,54 @@ const Calculate = (dataObject, buttonName) => {
       if (operation) {
         return {
           total,
-          next: Operate(next, -1, 'x'),
+          next: operate(next, -1, 'x'),
           operate,
-        }
+        };
       }
       return {
-        total: Operate(total, -1, 'x'),
+        total: operate(total, -1, 'x'),
         next,
         operate,
-      }
+      };
 
     case '%':
       if (operation) {
-        let preCalc = Operate(total, next, operation);
+        const preCalc = operate(total, next, operation);
         return {
-          total: Operate(preCalc, 100, '÷'),
+          total: operate(preCalc, 100, '÷'),
           next: null,
           operation: null,
-        }
+        };
       }
       return {
-        total: Operate(total, 100, '÷'),
+        total: operate(total, 100, '÷'),
         next,
-        operation
-      }
+        operation,
+      };
 
     case '=':
       if (operation) {
         return {
-          total: Operate(total, next, operation),
+          total: operate(total, next, operation),
           next,
-          operation: null
-        }
+          operation: null,
+        };
       }
       return {
         total,
         next,
-        operation
-      }
+        operation,
+      };
 
     case 'AC':
       return {
         total: null,
         next: null,
-        operation: null
-      }
+        operation: null,
+      };
+    default:
+      return null;
   }
-}
+};
 
-export default Calculate;
+export default calculate;
