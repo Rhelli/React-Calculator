@@ -3,12 +3,30 @@ import Display from './Display';
 import ButtonPanel from './ButtonPanel';
 import calculate from '../logic/calculate';
 
-const App = () => (
-  <>
-    <Display />
-    <ButtonPanel />
-    { calculate }
-  </>
-);
+export default class App extends React.Component {
+  constructor(props) {
+    super(props);
 
-export default App;
+    this.state = {
+      total: null,
+      next: null,
+      operation: null,
+    }
+
+    this.handleClick = this.handleClick.bind(this);
+  };
+
+  handleClick(buttonName) {
+    const calc = calculate(this.state, buttonName);
+    this.setState(calc);
+  };
+
+  render() {
+    return (
+      <>
+        <Display />
+        <ButtonPanel />
+      </>
+    )
+  }
+};
