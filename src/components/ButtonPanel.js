@@ -1,38 +1,53 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Button from './Button';
 
-const ButtonPanel = () => (
-  <div>
-    <div id="group1">
-      <Button name="AC" />
-      <Button name="+/-" />
-      <Button name="%" />
-      <Button name="÷" />
-    </div>
-    <div id="group2">
-      <Button name="7" />
-      <Button name="8" />
-      <Button name="9" />
-      <Button name="X" />
-    </div>
-    <div id="group3">
-      <Button name="4" />
-      <Button name="5" />
-      <Button name="6" />
-      <Button name="-" />
-    </div>
-    <div id="group4">
-      <Button name="1" />
-      <Button name="2" />
-      <Button name="3" />
-      <Button name="+" />
-    </div>
+const ButtonPanel = props => {
+  const handleClick = buttonName => {
+    props.clickHandler(buttonName);
+  };
+
+  return (
     <div>
-      <Button name="0" />
-      <Button name="." />
-      <Button name="=" />
+      <div id="group1">
+        <Button clickHandler={handleClick} buttonName="AC" />
+        <Button clickHandler={handleClick} buttonName="+/-" />
+        <Button clickHandler={handleClick} buttonName="%" />
+        <Button clickHandler={handleClick} buttonName="÷" />
+      </div>
+      <div id="group2">
+        <Button clickHandler={handleClick} buttonName="7" />
+        <Button clickHandler={handleClick} buttonName="8" />
+        <Button clickHandler={handleClick} buttonName="9" />
+        <Button clickHandler={handleClick} buttonName="x" />
+      </div>
+      <div id="group3">
+        <Button clickHandler={handleClick} buttonName="4" />
+        <Button clickHandler={handleClick} buttonName="5" />
+        <Button clickHandler={handleClick} buttonName="6" />
+        <Button clickHandler={handleClick} buttonName="-" />
+      </div>
+      <div id="group4">
+        <Button clickHandler={handleClick} buttonName="1" />
+        <Button clickHandler={handleClick} buttonName="2" />
+        <Button clickHandler={handleClick} buttonName="3" />
+        <Button clickHandler={handleClick} buttonName="+" />
+      </div>
+      <div>
+        <Button clickHandler={handleClick} buttonName="0" />
+        <Button clickHandler={handleClick} buttonName="." />
+        <Button clickHandler={handleClick} buttonName="=" />
+      </div>
     </div>
-  </div>
-);
+  );
+};
+
+ButtonPanel.defaultProps = {
+  clickHandler: null,
+};
+
+ButtonPanel.propTypes = {
+  clickHandler: PropTypes.func,
+};
 
 export default ButtonPanel;

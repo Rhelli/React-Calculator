@@ -6,13 +6,13 @@ const operate = (numberOne, numberTwo, operation) => {
 
   switch (operation) {
     case '+':
-      return n1.plus(n2);
+      return n1.plus(n2).toString();
     case '-':
-      return n1.minus(n2);
+      return n1.minus(n2).toString();
     case 'x':
-      return n1.multiply(n2);
+      return n1.times(n2).toString();
     case '÷':
-      return n1.div(n2);
+      return n1.div(n2).toString();
     default:
       return null;
   }

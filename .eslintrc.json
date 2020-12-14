@@ -35,6 +35,10 @@
     "arrow-parens": [
       "error",
       "as-needed"
+    ],
+    "linebreak-style": [
+      "error",
+      "windows"
     ]
   },
   "ignorePatterns": [
