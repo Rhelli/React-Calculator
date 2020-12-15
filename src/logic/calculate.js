@@ -1,22 +1,24 @@
-import Operate from './operate';
+import operate from './operate';
 
 const calculate = (dataObject, buttonName) => {
   let { total, next, operation } = dataObject;
   let preCalc;
-  const operatorSymbols = ['+', '-', '÷', 'x'];
 
-  const operationExists = operator => operatorSymbols.includes(operator);
+  const operationExists = operator => {
+    const operatorSymbols = ['+', '-', '÷', 'x'];
+    return operatorSymbols.includes(operator);
+  };
 
   if (buttonName === '+/-') {
     if (operation) {
       return {
         total,
-        next: Operate(next, -1, 'x'),
+        next: operate(next, -1, 'x'),
         operation,
       };
     }
     return {
-      total: Operate(total, -1, 'x'),
+      total: operate(total, -1, 'x'),
       next,
       operation,
     };
@@ -24,14 +26,14 @@ const calculate = (dataObject, buttonName) => {
 
   if (buttonName === '%') {
     if (operation) {
-      preCalc = Operate(total, next, operation);
+      preCalc = operate(total, next, operation);
       return {
-        total: Operate(preCalc, 100, '÷'),
+        total: operate(preCalc, 100, '÷'),
         next: null,
         operation: null,
       };
     }
-    preCalc = Operate(total, 100, '÷');
+    preCalc = operate(total, 100, '÷');
     return {
       total: preCalc,
       next,
@@ -42,7 +44,7 @@ const calculate = (dataObject, buttonName) => {
   if (buttonName === '=') {
     if (operation) {
       return {
-        total: Operate(total, next, operation),
+        total: operate(total, next, operation),
         next: null,
         operation: null,
       };
@@ -80,7 +82,7 @@ const calculate = (dataObject, buttonName) => {
 
   if (operationExists(buttonName) && total && operation) {
     return {
-      total: Operate(total, next, operation),
+      total: operate(total, next, operation),
       next: null,
       operation: buttonName,
     };
@@ -88,7 +90,7 @@ const calculate = (dataObject, buttonName) => {
 
   if (buttonName.match(/\d/)) {
     if (!operation) {
-      if (!total || total === '0' || total === 'Error') {
+      if (!total || total === '0' || total === 'error') {
         total = buttonName;
       } else {
         total += buttonName;
@@ -113,7 +115,8 @@ const calculate = (dataObject, buttonName) => {
         next,
         operation,
       };
-    } if (!next.includes('.')) {
+    }
+    if (!next.includes('.')) {
       next += '.';
       return {
         total,
