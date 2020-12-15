@@ -14,7 +14,7 @@ const operate = (numberOne, numberTwo, operation) => {
     case '÷':
       return n1.div(n2).toString();
     default:
-      return null;
+      return 'error';
   }
 };
 

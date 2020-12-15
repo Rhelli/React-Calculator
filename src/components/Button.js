@@ -4,16 +4,16 @@ import PropTypes from 'prop-types';
 const Button = props => {
   const { buttonName } = props;
 
-  const handleClick = event => {
-    event.stopPropagation();
-    props.clickHandler(event.target.id);
+  const handleClick = e => {
+    e.stopPropagation();
+    props.clickHandler(e.target.id);
   };
 
   return (
     <button
-      type="button"
       id={buttonName}
       onClick={handleClick}
+      type="button"
     >
       {buttonName}
     </button>
