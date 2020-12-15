@@ -33,7 +33,7 @@ const ButtonPanel = props => {
         <Button clickHandler={handleClick} buttonName="3" />
         <Button clickHandler={handleClick} buttonName="+" />
       </div>
-      <div>
+      <div id="group5">
         <Button clickHandler={handleClick} buttonName="0" />
         <Button clickHandler={handleClick} buttonName="." />
         <Button clickHandler={handleClick} buttonName="=" />

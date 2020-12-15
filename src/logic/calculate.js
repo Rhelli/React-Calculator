@@ -1,10 +1,13 @@
 import operate from './operate';
 
 const calculate = (dataObject, buttonName) => {
-  let { total, next } = dataObject;
-  const { operation } = dataObject;
-  const operatorSymbols = ['+', '-', '÷', 'x'];
-  const operationExists = operator => operatorSymbols.includes(operator);
+  let { total, next, operation } = dataObject;
+  let preCalc;
+
+  const operationExists = operator => {
+    const operatorSymbols = ['+', '-', '÷', 'x'];
+    operatorSymbols.includes(operator);
+  };
 
   if (buttonName === '+/-') {
     if (operation) {
@@ -23,15 +26,16 @@ const calculate = (dataObject, buttonName) => {
 
   if (buttonName === '%') {
     if (operation) {
-      const preCalc = operate(total, next, operation);
+      preCalc = operate(total, next, operation);
       return {
         total: operate(preCalc, 100, '÷'),
         next: null,
         operation: null,
       };
     }
+    preCalc = operate(total, 100, '÷');
     return {
-      total: operate(total, 100, '÷'),
+      total: preCalc,
       next,
       operation,
     };
@@ -41,7 +45,7 @@ const calculate = (dataObject, buttonName) => {
     if (operation) {
       return {
         total: operate(total, next, operation),
-        next,
+        next: null,
         operation: null,
       };
     }
@@ -67,7 +71,8 @@ const calculate = (dataObject, buttonName) => {
     };
   }
 
-  if (operationExists(buttonName) && ((total && !operation) || (!next && operation))) {
+  if (operationExists(buttonName)
+    && ((total && !operation) || (!next && operation))) {
     return {
       total,
       next,
@@ -85,7 +90,7 @@ const calculate = (dataObject, buttonName) => {
 
   if (buttonName.match(/\d/)) {
     if (!operation) {
-      if (!total || total === '0' || total === null) {
+      if (!total || total === '0' || total === 'error') {
         total = buttonName;
       } else {
         total += buttonName;

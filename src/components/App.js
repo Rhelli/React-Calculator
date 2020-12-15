@@ -17,8 +17,8 @@ export default class App extends React.Component {
   }
 
   handleClick(buttonName) {
-    const calc = calculate(this.state, buttonName);
-    this.setState(calc);
+    const value = calculate(this.state, buttonName);
+    this.setState(value);
   }
 
   render() {

@@ -36,6 +36,7 @@
       "error",
       "as-needed"
     ],
+    "prefer-const": "off",
     "linebreak-style": [
       "error",
       "windows"
