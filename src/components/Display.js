@@ -5,7 +5,7 @@ const Display = props => {
   const { value } = props;
   return (
     <div>
-      <h3>{value}</h3>
+      <h2>{value || '0'}</h2>
     </div>
   );
 };

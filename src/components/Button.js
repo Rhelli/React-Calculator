@@ -2,20 +2,32 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Button = props => {
-  const { name } = props;
+  const { buttonName } = props;
+
+  const handleClick = e => {
+    e.stopPropagation();
+    props.clickHandler(e.target.id);
+  };
+
   return (
-    <button type="button">
-      {name}
+    <button
+      id={buttonName}
+      onClick={handleClick}
+      type="button"
+    >
+      {buttonName}
     </button>
   );
 };
 
 Button.defaultProps = {
-  name: '',
+  buttonName: '',
+  clickHandler: null,
 };
 
 Button.propTypes = {
-  name: PropTypes.string,
+  buttonName: PropTypes.string,
+  clickHandler: PropTypes.func,
 };
 
 export default Button;

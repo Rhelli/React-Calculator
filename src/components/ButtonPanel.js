@@ -1,38 +1,45 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Button from './Button';
 
-const ButtonPanel = () => (
-  <div>
-    <div id="group1">
-      <Button name="AC" />
-      <Button name="+/-" />
-      <Button name="%" />
-      <Button name="÷" />
-    </div>
-    <div id="group2">
-      <Button name="7" />
-      <Button name="8" />
-      <Button name="9" />
-      <Button name="X" />
-    </div>
-    <div id="group3">
-      <Button name="4" />
-      <Button name="5" />
-      <Button name="6" />
-      <Button name="-" />
-    </div>
-    <div id="group4">
-      <Button name="1" />
-      <Button name="2" />
-      <Button name="3" />
-      <Button name="+" />
-    </div>
+const ButtonPanel = props => {
+  const handleClick = buttonName => {
+    props.clickHandler(buttonName);
+  };
+
+  const group1 = ['AC', '+/-', '%', '÷'];
+  const group2 = ['7', '8', '9', 'x'];
+  const group3 = ['4', '5', '6', '-'];
+  const group4 = ['1', '2', '3', '+'];
+  const group5 = ['0', '.', '='];
+
+  return (
     <div>
-      <Button name="0" />
-      <Button name="." />
-      <Button name="=" />
+      <div id="group1">
+        { group1.map(val => <Button clickHandler={handleClick} key={`btn_${val}`} buttonName={val} />) }
+      </div>
+      <div id="group2">
+        {group2.map(val => <Button clickHandler={handleClick} key={`btn_${val}`} buttonName={val} />)}
+      </div>
+      <div id="group3">
+        {group3.map(val => <Button clickHandler={handleClick} key={`btn_${val}`} buttonName={val} />)}
+      </div>
+      <div id="group4">
+        {group4.map(val => <Button clickHandler={handleClick} key={`btn_${val}`} buttonName={val} />)}
+      </div>
+      <div id="group5">
+        {group5.map(val => <Button clickHandler={handleClick} key={`btn_${val}`} buttonName={val} />)}
+      </div>
     </div>
-  </div>
-);
+  );
+};
+
+ButtonPanel.defaultProps = {
+  clickHandler: null,
+};
+
+ButtonPanel.propTypes = {
+  clickHandler: PropTypes.func,
+};
 
 export default ButtonPanel;
