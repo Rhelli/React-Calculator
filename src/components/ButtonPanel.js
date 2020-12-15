@@ -7,36 +7,28 @@ const ButtonPanel = props => {
     props.clickHandler(buttonName);
   };
 
+  const group1 = ['AC', '+/-', '%', '÷'];
+  const group2 = ['7', '8', '9', 'x'];
+  const group3 = ['4', '5', '6', '-'];
+  const group4 = ['1', '2', '3', '+'];
+  const group5 = ['0', '.', '='];
+
   return (
     <div>
       <div id="group1">
-        <Button clickHandler={handleClick} buttonName="AC" />
-        <Button clickHandler={handleClick} buttonName="+/-" />
-        <Button clickHandler={handleClick} buttonName="%" />
-        <Button clickHandler={handleClick} buttonName="÷" />
+        { group1.map(val => <Button clickHandler={handleClick} key={`btn_${val}`} buttonName={val} />) }
       </div>
       <div id="group2">
-        <Button clickHandler={handleClick} buttonName="7" />
-        <Button clickHandler={handleClick} buttonName="8" />
-        <Button clickHandler={handleClick} buttonName="9" />
-        <Button clickHandler={handleClick} buttonName="x" />
+        {group2.map(val => <Button clickHandler={handleClick} key={`btn_${val}`} buttonName={val} />)}
       </div>
       <div id="group3">
-        <Button clickHandler={handleClick} buttonName="4" />
-        <Button clickHandler={handleClick} buttonName="5" />
-        <Button clickHandler={handleClick} buttonName="6" />
-        <Button clickHandler={handleClick} buttonName="-" />
+        {group3.map(val => <Button clickHandler={handleClick} key={`btn_${val}`} buttonName={val} />)}
       </div>
       <div id="group4">
-        <Button clickHandler={handleClick} buttonName="1" />
-        <Button clickHandler={handleClick} buttonName="2" />
-        <Button clickHandler={handleClick} buttonName="3" />
-        <Button clickHandler={handleClick} buttonName="+" />
+        {group4.map(val => <Button clickHandler={handleClick} key={`btn_${val}`} buttonName={val} />)}
       </div>
       <div id="group5">
-        <Button clickHandler={handleClick} buttonName="0" />
-        <Button clickHandler={handleClick} buttonName="." />
-        <Button clickHandler={handleClick} buttonName="=" />
+        {group5.map(val => <Button clickHandler={handleClick} key={`btn_${val}`} buttonName={val} />)}
       </div>
     </div>
   );
