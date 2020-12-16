@@ -1,70 +1,85 @@
-# Getting Started with Create React App
+<p align="center">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1 align="center">🧮➗✖️ React Calculator</h1>
 
-## Available Scripts
 
-In the project directory, you can run:
+<h3 align='center'>
+    A Quick, Simple Calculator Created Using React
+</h3>
+<p align="center">
+    <br />
+    <a href="https://rorys-react-calculator.herokuapp.com/"><strong>🧮 Try Out The Calculator »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/Rhelli/React-Calculator/archive/develop.zip">Download this repository</a>
+    |
+    <a href="https://github.com/Rhelli/React-Calculator/issues/new/choose">Report A Bug</a>
+    |
+    <a href="https://github.com/Rhelli/React-Calculator/fork">Fork It</a>
+  </p>
+</p>
 
-### `npm start`
+## 🔰 The Project Brief
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+This project is part of a series of projects to be completed by students of [Microverse](https://www.microverse.org/).
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+As the first project in the React module and, having followed the initial lessons concerning stateless and stateful components, class components and functional components as well as state and props, this first project focuses on establishing foundational practical knowledge by building a simple calculator.
 
-### `npm test`
+In this project, we are required to utilise the lessons learned from above.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## 🖱️ Technologies Used
+**Languages & Frameworks**
+ - JavaScript
+ - React
+ - CSS
+ - Webpack
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Package Management & Packages**
+ - NPM
+ - [Big.js](https://github.com/MikeMcl/big.js/) for floating point arithmetic
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**Linters & Quality Control**
+ - [ESlint](https://eslint.org/)
+ - [StyleLint](https://stylelint.io/)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🛠️ Setup & Usage
+For a live version of the calculator, [head here.](https://rorys-react-calculator.herokuapp.com/)
 
-### `npm run eject`
+1. To inspect and tinker with the code on your system, download this repo either [here](https://github.com/Rhelli/React-Calculator/archive/develop.zip) or from the link at the top of the page.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+2. Now it's time to ensure you've got Node and NPM installed. If you do, skip this step. Otherwise, head on over to [nodejs's website](https://nodejs.org/en/) to download node with npm.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. Time to go back to the project! Open your terminal (either in your text editor or otherwise) and 'cd' (i.e. navigate) to the root of this repo.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+4. Time to install Webpack! Ensuring you're at this repo's root, enter the following command into your terminal. This will install webpack locally (to this project only):
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+        npm install --save-dev webpack
 
-## Learn More
+5. Finally, once webpack has installed successfully, run the following command to install all of the projects dependencies:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+        npm install
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### Usage
+To run the project locally on your machine, simply run `$npm run start`. This will initialise the calculator in a local server on your machine and open it in a new page of your chosen / default browser. Any updates to the code (as long as error-free), will be immediately reflected.
 
-### Code Splitting
+## ✨ Contributions, Issues & Forking
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+If you have any issues setting up the project or you come across any unintended bugs or problems, please do submit an issue to the [React Calculator](https://github.com/Rhelli/React-Calculator/issues) page.
 
-### Analyzing the Bundle Size
+If you want to make your own changes, modifications or improvements to our project, go ahead and Fork it!
+1. [Fork it](https://github.com/Rhelli/React-Calculator/fork)
+2. Create your working branch (git checkout -b [choose-a-name])
+3. Commit your changes (git commit -am 'what this commit will fix/add/improve')
+4. Push to the branch (git push origin [chosen-name])
+5. Create a new Pull Request
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🦸🏽‍♂️ Creator
 
-### Making a Progressive Web App
+Rory Hellier - [Github](https://github.com/Rhelli)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 🙋🏽‍♂️ Show Your Support!
+Give a ⭐️ if you like this project!
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 📑 Licensing
+This project is [MIT](https://github.com/Rhelli/React-Calculator/LICENSE.txt) licensed.
