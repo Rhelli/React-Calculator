@@ -1,0 +1,11 @@
+.appContainer {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-flow: column nowrap;
+  width: 700px;
+  height: auto;
+  border: 1px solid red;
+}
