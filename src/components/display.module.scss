@@ -1,0 +1,15 @@
+.display {
+  padding: 10px;
+  background-color: lightgray;
+  height: 100px;
+  text-align: right;
+
+  h2 {
+    display: block;
+    height: auto;
+    font-size: 88px;
+    color: white;
+    font-weight: 700;
+    line-height: 100%;
+  }
+}

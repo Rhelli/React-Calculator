@@ -21,7 +21,7 @@ const App = () => {
     if (operation && !next) { setDisplay(<Display value={total} />); }
     if (operation && next) { setDisplay(<Display value={next} />); }
     if (!operation) { setDisplay(<Display value={total} />); }
-  });
+  }, [operation, next, total]);
 
   return (
     <div className={styles.appContainer}>
