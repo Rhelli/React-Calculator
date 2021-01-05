@@ -23,10 +23,36 @@
   }
 }
 
+button {
+  &:focus {
+    outline: none;
+  }
+}
+
 .grey {
   background-color: #EAEDED;
+  transition-duration: 0.1s;
+
+  &:hover {
+    background-color: #CDCFCF;
+    transition-duration: 0.15s;
+  }
+
+  &:focus {
+    border: 2px solid #929494;
+  }
 }
 
 .orange {
   background-color: #F0B27A;
+  transition-duration: 0.1s;
+
+  &:hover {
+    background-color: #D29C6B;
+    transition-duration: 0.15s;
+  }
+
+  &:focus {
+    border: 2px solid #B4855C;
+  }
 }
