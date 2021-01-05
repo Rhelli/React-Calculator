@@ -1,8 +1,11 @@
 .buttonPanel {
   display: flex;
   flex-flow: column nowrap;
-
-  div {
-    height: 100px;
-  }
 }
+
+.row {
+  display: flex;
+  flex-flow: row nowrap;
+  height: 100px;
+}
+

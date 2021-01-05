@@ -1,0 +1,32 @@
+.button {
+  width: 25%;
+  height: 100%;
+  border: 1px solid #C8CACC;
+
+  button {
+    height: 100%;
+    width: 100%;
+    border: none;
+    font: 400 20px/20px Arial, sans-serif;
+  }
+}
+
+.zeroButton {
+  width: 50%;
+  border: 1px solid #C8CACC;
+
+  button {
+    width: 100%;
+    height: 100%;
+    border: none;
+    font: 400 20px/20px Arial, sans-serif;
+  }
+}
+
+.grey {
+  background-color: #EAEDED;
+}
+
+.orange {
+  background-color: #F0B27A;
+}
