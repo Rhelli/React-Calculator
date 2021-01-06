@@ -1,0 +1,28 @@
+.quotePage {
+  width: 100%;
+  height: auto;
+}
+
+.quoteContainer {
+  width: 100%;
+  height: auto;
+  margin-top: 100px;
+  text-align: center;
+  font: 600 32px/32px Arial, sans-serif;
+  background-color: lightblue;
+  padding: 40px;
+  border-radius: 6px;
+  border: 14px double teal;
+  -webkit-box-shadow: 10px 10px 0px -4px rgba(204,204,204,1);
+  -moz-box-shadow: 10px 10px 0px -4px rgba(204,204,204,1);
+  box-shadow: 10px 10px 0px -4px rgba(204,204,204,1);
+
+  h3 {
+    font-style: italic;
+    margin-bottom: 20px;
+  }
+
+  h4 {
+    font-weight: 500;
+  }
+}

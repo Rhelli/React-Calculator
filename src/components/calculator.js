@@ -2,9 +2,10 @@ import React, { useState, useEffect } from 'react';
 import Display from './Display';
 import ButtonPanel from './ButtonPanel';
 import calculate from '../logic/calculate';
-import styles from './app.module.scss';
+import Navbar from './navbar';
+import style from './calculator.module.scss';
 
-const App = () => {
+const Calculator = () => {
   const [total, setTotal] = useState(null);
   const [next, setNext] = useState(null);
   const [operation, setOperation] = useState(null);
@@ -24,11 +25,19 @@ const App = () => {
   }, [operation, next, total]);
 
   return (
-    <div className={styles.appContainer}>
-      {display}
-      <ButtonPanel clickHandler={handleClick} />
+    <div>
+      <Navbar />
+      <div className={style.calculatorContainer}>
+        <div className={style.calculatorBlurb}>
+          <h4>Let&apos;s Math It Up Nerds</h4>
+        </div>
+        <div className={style.calculator}>
+          {display}
+          <ButtonPanel clickHandler={handleClick} />
+        </div>
+      </div>
     </div>
   );
 };
 
-export default App;
+export default Calculator;
