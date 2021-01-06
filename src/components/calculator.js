@@ -3,7 +3,7 @@ import Display from './Display';
 import ButtonPanel from './ButtonPanel';
 import calculate from '../logic/calculate';
 import Navbar from './navbar';
-import styles from './calculator.module.scss';
+import style from './calculator.module.scss';
 
 const Calculator = () => {
   const [total, setTotal] = useState(null);
@@ -27,11 +27,11 @@ const Calculator = () => {
   return (
     <div>
       <Navbar />
-      <div>
-        <div>
-          <h4>Let&apos;s Math It Up</h4>
+      <div className={style.calculatorContainer}>
+        <div className={style.calculatorBlurb}>
+          <h4>Let&apos;s Math It Up Nerds</h4>
         </div>
-        <div className={styles.calculatorContainer}>
+        <div className={style.calculator}>
           {display}
           <ButtonPanel clickHandler={handleClick} />
         </div>

@@ -1,8 +1,23 @@
 .calculatorContainer {
-  position: absolute;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: center;
+  width: 100%;
+  height: auto;
+}
+
+.calculatorBlurb {
+  width: 50%;
+  height: auto;
+  text-align: left;
+  padding-left: 20px;
+  font: 400 36px/36px Arial, sans-serif;
+}
+
+.calculator {
   top: 100px;
-  left: 50%;
-  transform: translateX(-50%);
   display: flex;
   flex-flow: column nowrap;
   width: 700px;
