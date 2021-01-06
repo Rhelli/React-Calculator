@@ -1,9 +1,15 @@
 import React from 'react';
+import Navbar from './navbar';
 
-const Quote = () => {
+function Quote() {
   return (
     <div>
-      <h3>"They don't think it be like it is, but it do" - Oscar Gamble</h3>
+      <div>
+        <Navbar />
+      </div>
+      <div>
+        <h3>&quot;They don&apos;t think it be like it is, but it do&quot; - Oscar Gamble</h3>
+      </div>
     </div>
   );
 }

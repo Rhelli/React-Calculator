@@ -40,7 +40,8 @@
     "linebreak-style": [
       "error",
       "windows"
-    ]
+    ],
+    "max-len": "off"
   },
   "ignorePatterns": [
     "dist/",
