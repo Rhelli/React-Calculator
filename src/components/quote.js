@@ -1,14 +1,16 @@
 import React from 'react';
 import Navbar from './navbar';
+import style from './quote.module.scss';
 
 function Quote() {
   return (
-    <div>
+    <div className={style.quotePage}>
       <div>
         <Navbar />
       </div>
-      <div>
-        <h3>&quot;They don&apos;t think it be like it is, but it do&quot; - Oscar Gamble</h3>
+      <div className={style.quoteContainer}>
+        <h3>&quot;They don&apos;t think it be like it is, but it do&quot;</h3>
+        <h4>Oscar Gamble</h4>
       </div>
     </div>
   );

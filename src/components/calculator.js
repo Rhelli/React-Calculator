@@ -27,9 +27,14 @@ const Calculator = () => {
   return (
     <div>
       <Navbar />
-      <div className={styles.appContainer}>
-        {display}
-        <ButtonPanel clickHandler={handleClick} />
+      <div>
+        <div>
+          <h4>Let&apos;s Math It Up</h4>
+        </div>
+        <div className={styles.calculatorContainer}>
+          {display}
+          <ButtonPanel clickHandler={handleClick} />
+        </div>
       </div>
     </div>
   );
