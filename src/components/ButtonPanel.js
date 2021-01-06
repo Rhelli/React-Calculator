@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Button from './Button';
+import styles from './buttonPanel.module.scss';
 
 const ButtonPanel = props => {
   const handleClick = buttonName => {
@@ -13,21 +14,22 @@ const ButtonPanel = props => {
   const group4 = ['1', '2', '3', '+'];
   const group5 = ['0', '.', '='];
 
+
   return (
-    <div>
-      <div id="group1">
+    <div className={styles.buttonPanel}>
+      <div id="group1" className={styles.row}>
         { group1.map(val => <Button clickHandler={handleClick} key={`btn_${val}`} buttonName={val} />) }
       </div>
-      <div id="group2">
+      <div id="group2" className={styles.row}>
         {group2.map(val => <Button clickHandler={handleClick} key={`btn_${val}`} buttonName={val} />)}
       </div>
-      <div id="group3">
+      <div id="group3" className={styles.row}>
         {group3.map(val => <Button clickHandler={handleClick} key={`btn_${val}`} buttonName={val} />)}
       </div>
-      <div id="group4">
+      <div id="group4" className={styles.row}>
         {group4.map(val => <Button clickHandler={handleClick} key={`btn_${val}`} buttonName={val} />)}
       </div>
-      <div id="group5">
+      <div id="group5" className={styles.row}>
         {group5.map(val => <Button clickHandler={handleClick} key={`btn_${val}`} buttonName={val} />)}
       </div>
     </div>

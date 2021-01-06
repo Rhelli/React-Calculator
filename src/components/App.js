@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Display from './Display';
 import ButtonPanel from './ButtonPanel';
 import calculate from '../logic/calculate';
+import styles from './app.module.scss';
 
 const App = () => {
   const [total, setTotal] = useState(null);
@@ -20,10 +21,10 @@ const App = () => {
     if (operation && !next) { setDisplay(<Display value={total} />); }
     if (operation && next) { setDisplay(<Display value={next} />); }
     if (!operation) { setDisplay(<Display value={total} />); }
-  });
+  }, [operation, next, total]);
 
   return (
-    <div>
+    <div className={styles.appContainer}>
       {display}
       <ButtonPanel clickHandler={handleClick} />
     </div>
