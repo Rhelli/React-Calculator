@@ -1,0 +1,11 @@
+.buttonPanel {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.row {
+  display: flex;
+  flex-flow: row nowrap;
+  height: 100px;
+}
+

@@ -36,7 +36,12 @@
       "error",
       "as-needed"
     ],
-    "prefer-const": "off"
+    "prefer-const": "off",
+    "linebreak-style": [
+      "error",
+      "windows"
+    ],
+    "max-len": "off"
   },
   "ignorePatterns": [
     "dist/",
