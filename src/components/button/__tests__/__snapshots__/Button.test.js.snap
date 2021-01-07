@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button appearance Matches the Button Snapshot 1`] = `
+<div
+  className="button"
+>
+  <button
+    className="grey"
+    id=""
+    onClick={[Function]}
+    type="button"
+  >
+    
+  </button>
+</div>
+`;
