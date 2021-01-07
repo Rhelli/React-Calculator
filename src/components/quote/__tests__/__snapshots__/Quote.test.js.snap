@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The appearance of the Quote Page Matches the Quote Page snapshot 1`] = `
+<div
+  className="quotePage"
+>
+  <div>
+    <div
+      className="navbarContainer"
+    >
+      <div
+        className="navbarTitle"
+      >
+        <h1>
+          Math Magicians
+        </h1>
+      </div>
+      <div
+        className="navbarLinks"
+      >
+        <a
+          href="/"
+        >
+          Home 
+        </a>
+        <span>
+           | 
+        </span>
+        <a
+          href="/Calculator"
+        >
+          Calculator 
+        </a>
+        <span>
+           | 
+        </span>
+        <a
+          href="/Quote"
+        >
+          Quote 
+        </a>
+      </div>
+    </div>
+  </div>
+  <div
+    className="quoteContainer"
+  >
+    <h3>
+      "They don't think it be like it is, but it do"
+    </h3>
+    <h4>
+      Oscar Gamble
+    </h4>
+  </div>
+</div>
+`;

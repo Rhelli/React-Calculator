@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The Navbar Appearance Matches the Navbar Snapshot 1`] = `
+<div
+  className="navbarContainer"
+>
+  <div
+    className="navbarTitle"
+  >
+    <h1>
+      Math Magicians
+    </h1>
+  </div>
+  <div
+    className="navbarLinks"
+  >
+    <a
+      href="/"
+    >
+      Home 
+    </a>
+    <span>
+       | 
+    </span>
+    <a
+      href="/Calculator"
+    >
+      Calculator 
+    </a>
+    <span>
+       | 
+    </span>
+    <a
+      href="/Quote"
+    >
+      Quote 
+    </a>
+  </div>
+</div>
+`;

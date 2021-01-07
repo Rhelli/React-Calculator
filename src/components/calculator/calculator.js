@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Display from '../display/Display';
 import ButtonPanel from '../buttonPanel/ButtonPanel';
 import calculate from '../../logic/calculate';
-import Navbar from '../navbar/navbar';
+import Navbar from '../navbar/Navbar';
 import style from './calculator.module.scss';
 
 const Calculator = () => {
