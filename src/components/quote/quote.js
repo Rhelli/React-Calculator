@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from './navbar';
+import Navbar from '../navbar/navbar';
 import style from './quote.module.scss';
 
 function Quote() {

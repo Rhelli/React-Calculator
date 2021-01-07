@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import Calculator from './components/calculator';
-import Home from './components/home';
-import Quote from './components/quote';
+import Calculator from './components/calculator/calculator';
+import Home from './components/home/home';
+import Quote from './components/quote/quote';
 
 const Routes = () => (
   <BrowserRouter>
