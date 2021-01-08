@@ -4,42 +4,40 @@ exports[`The appearance of the Quote Page Matches the Quote Page snapshot 1`] = 
 <div
   className="quotePage"
 >
-  <div>
+  <div
+    className="navbarContainer"
+  >
     <div
-      className="navbarContainer"
+      className="navbarTitle"
     >
-      <div
-        className="navbarTitle"
+      <h1>
+        Math Magicians
+      </h1>
+    </div>
+    <div
+      className="navbarLinks"
+    >
+      <a
+        href="/"
       >
-        <h1>
-          Math Magicians
-        </h1>
-      </div>
-      <div
-        className="navbarLinks"
+        Home 
+      </a>
+      <span>
+         | 
+      </span>
+      <a
+        href="/Calculator"
       >
-        <a
-          href="/"
-        >
-          Home 
-        </a>
-        <span>
-           | 
-        </span>
-        <a
-          href="/Calculator"
-        >
-          Calculator 
-        </a>
-        <span>
-           | 
-        </span>
-        <a
-          href="/Quote"
-        >
-          Quote 
-        </a>
-      </div>
+        Calculator 
+      </a>
+      <span>
+         | 
+      </span>
+      <a
+        href="/Quote"
+      >
+        Quote 
+      </a>
     </div>
   </div>
   <div

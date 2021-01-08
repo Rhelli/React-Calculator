@@ -19,4 +19,15 @@ describe('The appearance of the Quote Page', () => {
     const { container } = render(<Quote />);
     expect(container.firstChild.firstChild.classList.contains('navbarContainer')).toBe(true);
   });
-})
+
+  it('Contains the Quote Container', () => {
+    const { container } = render(<Quote />);
+    expect(container.firstChild.lastChild.classList.contains('quoteContainer')).toBe(true);
+  });
+
+  it('Contains the Quotation Text', () => {
+    const { getByText } = render(<Quote />);
+    getByText(`"They don't think it be like it is, but it do"`);
+    getByText('Oscar Gamble');
+  });
+});
