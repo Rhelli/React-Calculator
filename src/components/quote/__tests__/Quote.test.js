@@ -27,7 +27,7 @@ describe('The appearance of the Quote Page', () => {
 
   it('Contains the Quotation Text', () => {
     const { getByText } = render(<Quote />);
-    getByText(`"They don't think it be like it is, but it do"`);
+    getByText('"They don\'t think it be like it is, but it do"');
     getByText('Oscar Gamble');
   });
 });

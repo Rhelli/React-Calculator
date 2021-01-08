@@ -6,8 +6,8 @@ import Button from '../Button';
 
 describe('Button appearance', () => {
   it('Matches the Button Snapshot', () => {
-    const tree = renderer.create(<Button />).toJSON()
-    expect(tree).toMatchSnapshot()
+    const tree = renderer.create(<Button />).toJSON();
+    expect(tree).toMatchSnapshot();
   });
 
   it('Matches its inline snapshot', () => {
@@ -23,6 +23,6 @@ describe('Button appearance', () => {
           type="button"
         />
       </div>
-    `)
+    `);
   });
 });

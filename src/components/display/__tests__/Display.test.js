@@ -14,4 +14,4 @@ describe('The Display Appearance', () => {
     const { getByText } = render(<Display />);
     getByText('0');
   });
-})
+});

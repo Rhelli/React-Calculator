@@ -32,5 +32,5 @@ describe('The Button Panel Appearance', () => {
     getByText('0');
     getByText('.');
     getByText('=');
-  })
-})
+  });
+});
