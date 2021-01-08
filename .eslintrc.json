@@ -36,7 +36,11 @@
       "error",
       "as-needed"
     ],
-    "prefer-const": "off",
+    "no-unused-expressions": "off",
+    "no-multi-assign": "off",
+    "consistent-return": "off",
+    "no-unused-vars": "off",
+    "perfer-const": "off",
     "max-len": "off"
   },
   "ignorePatterns": [
