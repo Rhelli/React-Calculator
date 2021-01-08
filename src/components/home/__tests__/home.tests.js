@@ -2,7 +2,7 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import renderer from 'react-test-renderer';
-import Home from '../Home.js';
+import Home from '../Home';
 
 describe('The Home Pages Appearance', () => {
   it('Matches the Homepage Snapshot', () => {
