@@ -23,8 +23,8 @@ body {
 body {
   width: 100%;
   height: 100vh;
-  background-color: #F4F6F6;
-  font: 400 16px/16px Arial;
+  background-color: #f4f6f6;
+  font: 400 16px/16px sans-serif;
   color: #303030;
 }
 

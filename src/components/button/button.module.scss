@@ -1,7 +1,13 @@
+button {
+  &:focus {
+    outline: none;
+  }
+}
+
 .button {
   width: 25%;
   height: 100%;
-  border: 1px solid #C8CACC;
+  border: 1px solid #c8cacc;
 
   button {
     height: 100%;
@@ -13,7 +19,7 @@
 
 .zeroButton {
   width: 50%;
-  border: 1px solid #C8CACC;
+  border: 1px solid #c8cacc;
 
   button {
     width: 100%;
@@ -23,18 +29,12 @@
   }
 }
 
-button {
-  &:focus {
-    outline: none;
-  }
-}
-
 .grey {
-  background-color: #EAEDED;
+  background-color: #eaeded;
   transition-duration: 0.1s;
 
   &:hover {
-    background-color: #CDCFCF;
+    background-color: #cdcfcf;
     transition-duration: 0.15s;
   }
 
@@ -44,15 +44,15 @@ button {
 }
 
 .orange {
-  background-color: #F0B27A;
+  background-color: #f0b27a;
   transition-duration: 0.1s;
 
   &:hover {
-    background-color: #D29C6B;
+    background-color: #d29c6b;
     transition-duration: 0.15s;
   }
 
   &:focus {
-    border: 2px solid #B4855C;
+    border: 2px solid #b4855c;
   }
 }
