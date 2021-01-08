@@ -29,26 +29,13 @@
         ]
       }
     ],
-    "import/extensions": [
-        "error",
-        "ignorePackages",
-        {
-          "js": "never",
-          "jsx": "never",
-          "ts": "never",
-          "tsx": "never",
-          "mjs": "never"
-        }
-    ],
     "react/react-in-jsx-scope": "off",
     "import/no-unresolved": "off",
     "no-shadow": "off",
     "arrow-parens": [
       "error",
       "as-needed"
-    ],
-    "prefer-const": "off",
-    "max-len": "off"
+    ]
   },
   "ignorePatterns": [
     "dist/",
