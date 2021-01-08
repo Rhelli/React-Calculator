@@ -41,10 +41,17 @@
     ]
   },
   "devDependencies": {
+    "babel-eslint": "^10.1.0",
     "babel-jest": "^26.6.3",
     "babel-preset-stage-0": "^6.24.1",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.5",
+    "eslint": "^7.17.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react-hooks": "^2.5.1",
     "jest-cli": "^26.6.3",
     "react-test-renderer": "^17.0.1",
     "sinon": "^9.2.3",
