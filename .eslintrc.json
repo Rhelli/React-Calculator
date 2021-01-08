@@ -20,13 +20,12 @@
     "react"
   ],
   "rules": {
-    "react/jsx-filename-extension": [
-      "warn",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
       {
-        "extensions": [
-          ".js",
-          ".jsx"
-        ]
+        "js": "never",
+        "jsx": "never"
       }
     ],
     "react/react-in-jsx-scope": "off",
