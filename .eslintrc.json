@@ -20,13 +20,25 @@
     "react"
   ],
   "rules": {
-    "import/extensions": [
-      "error",
-      "ignorePackages",
+    "react/jsx-filename-extension": [
+      "warn",
       {
-        "js": "never",
-        "jsx": "never"
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
       }
+    ],
+    "import/extensions": [
+        "error",
+        "ignorePackages",
+        {
+          "js": "never",
+          "jsx": "never",
+          "ts": "never",
+          "tsx": "never",
+          "mjs": "never"
+        }
     ],
     "react/react-in-jsx-scope": "off",
     "import/no-unresolved": "off",
