@@ -57,13 +57,6 @@ const calculate = (dataObject, buttonName) => {
   }
 
   if (buttonName === 'AC') {
-    if (next && operation) {
-      return {
-        total,
-        next: '0',
-        operation,
-      };
-    }
     return {
       total: null,
       next: null,
