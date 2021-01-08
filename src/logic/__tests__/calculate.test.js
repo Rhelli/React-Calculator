@@ -1,4 +1,4 @@
-import Calculate from '../calculate';
+import Calculate from '../calculate.js';
 
 describe('The calculate function', () => {
   it('Will wipe the total, next and operation if the AC button is pressed', () => {

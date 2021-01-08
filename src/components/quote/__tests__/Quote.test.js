@@ -2,7 +2,7 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import renderer from 'react-test-renderer';
-import Quote from '../Quote';
+import Quote from '../Quote.js';
 
 describe('The appearance of the Quote Page', () => {
   it('Matches the Quote Page snapshot', () => {
