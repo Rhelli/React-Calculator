@@ -14,7 +14,6 @@ const ButtonPanel = props => {
   const group4 = ['1', '2', '3', '+'];
   const group5 = ['0', '.', '='];
 
-
   return (
     <div className={styles.buttonPanel}>
       <div id="group1" className={styles.row}>
